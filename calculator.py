@@ -1,35 +1,31 @@
 from Tkinter import *
 
-class Calc():
-    def modIt(self):
-        firstIterm = self.firstItermEntry.get()
-        secondIterm = self.secondItermEntry.get()
-        result= firstIterm-secondIterm
+class Calc:
+    def __init__(self):
+        self.gui()
 
 
-    root = Tk()
-    root .title("self-running calculator")
+    def gui(self):
+        root = Tk()
+        root.title('IT calculator')
+        self.resVar = StringVar()
+        self.resEntry = Entry(textvariable=self.resVar, width=20, state='disabled')
+        self.resEntry.grid(row=1, column=4, columnspan=2)
+        self.firstItemLabel = Label(text='number:', width=10)
+        self.firstItemLabel = Label(width=10)
+        self.firstItemLabel.grid(row=1, column=0)
+        self.firstItemVar = StringVar()
+        self.firstItemEntry = Entry(textvariable=self.firstItemVar, width=10)
+        self.firstItemEntry.grid(row=1, column=1)
+        self.secondItemLabel = Label( width=10)
+        self.secondItemLabel.grid(row=1, column=2)
+        self.secondItemVar = StringVar()
+        self.secondItemEntry = Entry(textvariable=self.secondItemVar, width=10)
+        self.secondItemEntry.grid(row=1, column=3)
+        self.modButton = Button(width=5)
+        self.modButton.grid(row=1, column=2)
 
-    firstItermlabel=Label(width=10)
-    firstItermlabel.grid(row=1,column=0)
-    firstItermVar = StringVar()
-    firstItermEntry =Entry(textvariable=firstItermVar,width=10)
-    firstItermEntry.grid(row=1,column=0)
-    secondItermlabel = Label(width=10)
-    secondItermlabel.grid(row=1, column=3)
-    secondItermVar = StringVar()
-    secondItermEntry = Entry(textvariable=secondItermVar, width=10)
-    secondItermEntry.grid(row=1, column=3)
-    resVar = StringVar()
-    resEntry = Entry(textvariable=resVar, width=30, state='disabled')
-    resEntry.grid(row=1, column=4, columnspan=2)
-    calculateItermlabel=Label(width=3)
-    
-    calculateItermVar = StringVar()
-    calculateItermVar.set('minus')
-
-
-    root.mainloop()
-
+        root.mainloop()
+        return 0
 
 calc = Calc()

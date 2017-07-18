@@ -1,0 +1,4 @@
+/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 /Users/bill/pt/sklearnBayes.py
+Using TensorFlow backend.
+* acc on test: 0.649364177163
+* acc on valid: 0.578493080211

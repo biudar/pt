@@ -1,0 +1,4 @@
+/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 /Users/bill/pt/sklearnSGD.py
+Using TensorFlow backend.
+* acc on test: 0.675640037571
+* acc on valid: 0.591665766893
